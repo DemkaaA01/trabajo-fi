@@ -1,0 +1,39 @@
+<h1 class="mainTitle">Empieza añadiendo tus objetivos y tareas!</h1>
+
+<app-sidebar></app-sidebar>
+
+<div class="container">
+  <div class="add-note-btn" (click)="addNote()">+</div>
+
+  <div class="notes-container">
+    @for (note of notes; track note.title) {
+      <div [ngClass]="['post-it', note.color]">
+        <h1 contenteditable="true" (blur)="updateTitle(note, $event)">
+          {{ note.title }}
+        </h1>
+        <ul>
+          <li contenteditable="true" (blur)="updateDescription(note, $event)">
+            {{ note.description }}
+          </li>
+        </ul>
+
+        <span class="trash-icon" (click)="deleteNote(notes.indexOf(note))">🗑️</span>
+
+        <select
+          class="status-selector"
+          [(ngModel)]="note.status"
+          (change)="saveNotes()"
+        >
+          <option value="pendiente">Pendiente</option>
+          <option value="en-progreso">En progreso</option>
+          <option value="completada">Completada</option>
+        </select>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="apiPhrase">
+  <p>"{{ quote }}"</p>
+  <p>- {{ author }}</p>
+</div>

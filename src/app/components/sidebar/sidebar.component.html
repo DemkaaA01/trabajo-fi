@@ -1,0 +1,38 @@
+ <div class="overlay" *ngIf="isSidebarOpen" (click)="closeSidebar()"></div>
+  <div class="sidebar" [ngClass]="{ 'open': isSidebarOpen }">
+    <img class="imgLogo" (click)="closeSidebar()" src="images/LogoConFondo1.png" alt="L">
+    <button class="close-btn" (click)="closeSidebar()"> Hola Admin!  </button>
+
+
+    <a class="sidebar-item" routerLink="/sticky-interface" >
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQtJREFUSEvtlusRgkAMhDedYCfYiVTCUolYidgJnUTCgIM8707xZhzyEwa+bJLLrSBSSCQugsB5rhdLuCikDE3cG2xQEVwHwBpApYqHTyLeYFIJIF9R6pTIIpjUFMB9BDg36uz5GnicU0GKJfsWa2CDGmQYIeCalFMI2Ep36z60YbLB8lEMUiYCXRRXpJjSNhx6PGn/AbaSHKV+DQap/XHaGq52YXRHL5lbLLsMlyoyW5Uzq3QgYofjFA3cLJS+1O2N9bNSu1yLu/T4AP9Fj6Ndi58aAb/7eGEThTiQkpTM2YEsLwMns9c6ljmv1f/X22Uu2NtN0DcUJ6pIRZCsKdpaLN6Kt37o+j4a+AlwQd0fafZ6jAAAAABJRU5ErkJggg==" />
+      Interfaz
+    </a>
+
+
+    <a class="sidebar-item" routerLink="/stadistics" >
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAActJREFUSEvFVoFxwjAMlDYpkxQmKZkEZZLCJKWTlE3Ufmq7trEjmeYO33EkYOv1b+ltpicNfhIuDQOL6Isq7eeZz0ga77/ffBsh4QIOwY9E9EpE+5/PVYQPAfgj/kZEn0R09iRhAouoENGpYtMCzqfMVgJd4MDyPbCpVbSAMf9KRFOPfRNYRCEnJOwND3Bcu2uB94Djvm0B3GR+B3w66ZGZIPHaGGGMOLMIo1bSKIDDvn452mIUGCELyWtgMEXbWOMR4IJ1DQy2iyFsLPVS5bH38VIDq4UY/n+EcSF3Ana0UJ5TDozt8agUiwxV/sfYWc0RvJDNqVIxLWfcssZeTBwIB48n9wI8KjXi4TCY8BDUerOYq9Ilnmr/AQZrePE19D/cztprqFTu8YB59IrM2qqbCO/i4rqdLI++U1OVpuxSsOYDqwYCqTyWmSeQmBgt2bdMRBNRr23m4KnQOuvT/02pAzBYewqlYB3bq1Foxd52gTPwUclzN4uFliq/Lg7r6jPKPLWLiGItCmppHzdwxhzHZH3Z6zpa3jJrhmLeMrMEAL52VkPWS33TMC3TsrssAVzoF4diJjzfmAkF1JR0E2BPct45Lqm9wUbmfQPhC/4fjVbLhQAAAABJRU5ErkJggg==" />
+      Estadísticas
+    </a>
+
+
+    <a class="sidebar-item">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYxJREFUSEvtltFtwzAMRE+bJJs0kzSZxPQkTSeJO0mziYoTRIFm5dqKDPin+jEQM3y8kywy4KAVDuLiZfAwxGsIeAJ4igQ+m9YvsEg8AXgAuCwlFIl8/5ZJhFZjc65vAGefawY2gcxJJWcrI6scALA4u6YY8RkCJgXkXIy9MpcvzoOLkhhxG8dwZ3aRSHUfFaC3dwYQiQKA8CTEwgvYBd1Fws1AWVDLKtbavFaMBXMvaGGx2FnfAmashWtubsWFLxPYAUaRQIv4u7WqFbyUhwdxUnABiIRaMa1QjU+qrTC124OtzT1qE9gdULU7nR8F62kue9Bpsyq2h3TG+AtsL4lXrbZCqmD9Rr/MwdobPGMs3tXuWuxW7BP8g4sjh1jdeVXa7VxsmUv9mB/7XqsKr4HjXkSTZ7Ufs++2tsCtdabmoMF+EDgGnFvhlkljq0qNY/NJg0VVcWu2nvim8dZMoH7YYw2zPVwrqgmct4J9+t0OfrbvrgG7rebkGSNOOoluBXaDW0Gbu1Nv4rX//wDDmwEua6IYFwAAAABJRU5ErkJggg==" />
+      Notificaciones
+    </a>
+
+
+    <a  id="closeSesion" class="sidebar-item" routerLink="/login" >
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQtJREFUSEvtlusRgkAMhDedYCfYiVTCUolYidgJnUTCgIM8707xZhzyEwa+bJLLrSBSSCQugsB5rhdLuCikDE3cG2xQEVwHwBpApYqHTyLeYFIJIF9R6pTIIpjUFMB9BDg36uz5GnicU0GKJfsWa2CDGmQYIeCalFMI2Ep36z60YbLB8lEMUiYCXRRXpJjSNhx6PGn/AbaSHKV+DQap/XHaGq52YXRHL5lbLLsMlyoyW5Uzq3QgYofjFA3cLJS+1O2N9bNSu1yLu/T4AP9Fj6Ndi58aAb/7eGEThTiQkpTM2YEsLwMns9c6ljmv1f/X22Uu2NtN0DcUJ6pIRZCsKdpaLN6Kt37o+j4a+AlwQd0fafZ6jAAAAABJRU5ErkJggg=="/>
+      Cerrar sesión
+    </a>
+
+  </div>
+
+
+
+
+  <button class="menu-btn" (click)="openSidebar()">&#9776;</button>
+
+
+

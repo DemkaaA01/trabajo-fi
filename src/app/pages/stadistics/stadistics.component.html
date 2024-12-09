@@ -1,0 +1,49 @@
+ <app-sidebar></app-sidebar>
+<div class="stats-container">
+  <div class="chart-container">
+    <canvas
+      baseChart
+      [data]="chartData"
+      [options]="chartOptions"
+      [type]="'doughnut'">
+    </canvas>
+  </div>
+  <div class="stats-left">
+    <ul class="stats-list">
+      <li class="stat-item">
+        <h2>Tareas completadas: {{ deletedNotes.length }} / 100</h2>
+      </li>
+      <li class="stat-item">
+        <h2>Eficiencia: {{  getFormattedEfficiency() }}</h2>
+      </li>
+      <li class="stat-item">
+        <h2>Horas acumuladas: {{  getFormattedTotalHours() }} </h2>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="table-container">
+  <table class="statistics-table">
+    <thead>
+      <tr>
+        <th class="noteTitle">Nombre de la Tarea</th>
+        <th>Duración</th>
+        <th>Fecha de Agregado</th>
+        <th>Fecha de Completado</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (note of deletedNotes; track note.title) {
+        <tr (click)="onTaskClick(deletedNotes.indexOf(note))">
+          <td>{{ note.title }}</td>
+          <td>{{ note.duration }}</td>
+          <td>{{ note.createdAt | date: 'short' }}</td>
+          <td>{{ note.deletedAt | date: 'short' }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+

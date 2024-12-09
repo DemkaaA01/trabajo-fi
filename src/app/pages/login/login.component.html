@@ -1,0 +1,70 @@
+<main>
+  <div id="izquierda">
+    <img
+      src="images/logo-fondo.jpg"
+      alt="Imagen del usuario en la montaña"
+      class="imagen-fondo"
+    />
+  </div>
+
+  <div id="derecha">
+    <div id="logo-container">
+      <img
+        id="logo-login"
+        src="images/tasktrailogo.jpg"
+        alt="Task Trails Logo"
+      />
+      <h1>Task Trails</h1>
+    </div>
+
+    <h2>Iniciar Sesión</h2>
+
+    <button class="boton-social">
+      <img src="images/logo-google.png" alt="Google icon" /> Continue with
+      Google
+    </button>
+    <button class="boton-social">
+      <img src="images/twitter-logo.png" alt="Twitter icon" /> Continue with
+      Twitter
+    </button>
+
+    <p class="or-separator">
+      -------------------------------------- OR
+      --------------------------------------
+    </p>
+
+    <form>
+      <input
+        type="text"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="Usuario"
+        required
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Contraseña"
+        required
+      />
+    </form>
+
+    <div id="recuerdame">
+      <input type="checkbox" id="recuerdame-checkbox" />
+      <label for="recuerdame-checkbox"> Recuerdame</label>
+    </div>
+
+    <p class="registro">
+      No tienes una cuenta? <a href="#">Regístrate aquí</a>
+    </p>
+
+    <button (click)="iniciarSesion()" class="boton-resaltado">
+      Iniciar sesión
+    </button>
+
+    <p class="olvide-contraseña">
+      <a (click)="forgetPassword()">Olvidé mi contraseña</a>
+    </p>
+  </div>
+</main>

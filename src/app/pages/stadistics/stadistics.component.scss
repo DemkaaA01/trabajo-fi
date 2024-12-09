@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+app-sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+}
+canvas {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.stats-container {
+  padding-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.stats-left {
+  margin-left: 200px;
+  margin-top: 80px;
+}
+
+
+.stats-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.stat-item {
+  font-size: 30px;
+  color: #414651;
+  font-family: 'Montserrat';
+  padding: 10px 0;
+  display: list-item;
+  text-align: left;
+}
+
+
+.stats-right {
+  width: 300px;
+  height: 300px;
+
+}
+
+.table-container {
+  margin: 20px auto;
+  margin-left: 260px;
+  max-width: 80%;
+  text-align: center;
+  color: #414651;
+}
+
+.statistics-table {
+  width: 80%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-left: 130px;
+}
+
+.statistics-table th,
+.statistics-table td {
+  border: none;
+  text-align: left;
+  padding: 10px;
+
+}
+
+.statistics-table th {
+  background-color: whitesmoke;
+  font-weight: bold;
+}
+
+.statistics-table td{
+  cursor: pointer;
+}
+
+
+.statistics-table tbody tr:hover {
+  background-color: #414651;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+.statistics-table tbody tr:hover td {
+  color: whitesmoke;
+}
+
+.noteTitle {
+  width: 500px;
+}
+

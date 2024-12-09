@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+#izquierda {
+  flex: 1;
+  position: relative;
+  background-color: #333;
+
+  .imagen-fondo {
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#derecha {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+
+  #logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    #logo-login {
+      width: 120px;
+      margin-right: 10px;
+    }
+
+    h1 {
+      font-size: 44px;
+      font-family: "Montserrat";
+      font-weight: bold;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-family: "Montserrat";
+  }
+
+  .boton-social {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  .or-separator {
+    margin: 20px 0;
+    color: #888;
+    font-weight: bold;
+    font-family: "Montserrat";
+  }
+
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  #recuerdame {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-family: "Montserrat";
+
+    input {
+      margin-right: 5px;
+    }
+  }
+
+  .registro {
+    font-size: 14px;
+    margin: 10px 0;
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-family: "Montserrat";
+    }
+  }
+
+  .boton-resaltado {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #b19cd9;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .olvide-contraseña {
+    margin-top: 10px;
+    font-size: 14px;
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-family: "Montserrat";
+    }
+  }
+}
